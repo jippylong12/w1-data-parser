@@ -14,6 +14,8 @@ export * from './da_remark.js';
 export * from './da_check_register.js';
 export * from './da_surface_loc.js';
 export * from './da_bottom_hole_loc.js';
+export * from './schema_ids.js';
+
 
 // Also export the constants if they are not already (the * exports all named exports)
 // Assuming individual files export usage constants like DA_ROOT_FIELDS etc.

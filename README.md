@@ -27,7 +27,7 @@ import { W1Parser } from 'w1-data-parser';
 
 async function main() {
     const parser = new W1Parser();
-    const records = await parser.parseFile('./path/to/w1_data.txt');
+    const records = await parser.parseFile('./path/to/w1_data.dat');
 
     console.log(`Parsed ${records.length} root records.`);
 
@@ -57,7 +57,7 @@ If you only care about specific data segments (e.g., just the basic permit info)
 
 ```typescript
 // Parse only Root (01) and Permit (02) records
-const records = await parser.parseFile('./data.txt', ['01', '02']);
+const records = await parser.parseFile('./data.dat', ['01', '02']);
 ```
 
 ### Code Transformation
@@ -66,7 +66,7 @@ The RRC data uses many code values (e.g., County Codes, Well Status). The parser
 
 ```typescript
 // Enable code transformation (3rd argument)
-const records = await parser.parseFile('./data.txt', undefined, true);
+const records = await parser.parseFile('./data.dat', undefined, true);
 
 // Now accessing fields returns the description instead of the code
 // e.g., '109' becomes 'CULBERSON'

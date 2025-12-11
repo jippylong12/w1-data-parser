@@ -1,6 +1,6 @@
 {
   "name": "w1-data-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parser for Texas RRC W-1 data files",
   "license": "ISC",
   "author": "Marcus Salinas",

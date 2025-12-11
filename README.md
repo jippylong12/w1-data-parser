@@ -73,6 +73,23 @@ const records = await parser.parseFile('./data.dat', undefined, true);
 console.log('County:', records[0]["01"]?.county_code); 
 ```
 
+### JSON Serialization
+
+For use in web APIs (e.g., Next.js), you often need plain objects instead of class instances. `W1RecordGroup` supports `JSON.stringify()` directly, or you can use the `toObject()` helper.
+
+```typescript
+import { W1Parser } from 'w1-data-parser';
+
+const parser = new W1Parser();
+const records = await parser.parseFile('./data.dat');
+
+// Automatic serialization works
+const jsonString = JSON.stringify(records);
+
+// Or get a plain object explicitly (useful for Next.js props)
+const plainObject = records[0].toObject();
+```
+
 ## Development & Publishing
 
 ### Build

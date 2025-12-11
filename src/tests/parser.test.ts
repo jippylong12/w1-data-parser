@@ -47,12 +47,10 @@ describe('W1Parser Workflow', () => {
         expect(rootRecord.status_number).toBe(911978);
         expect(permitRecord.api_number).toBe("00349279");
 
-        // Verify object-level toJson (if we implemented it or just JSON.stringify)
-        // W1RecordGroup class in models.ts has toJson() method?
-        // Let's check models.ts content again.
-        // Yes: toJson(): string { return JSON.stringify(this); }
+        // Verify object-level serialization
+        // toJSON returns a plain object, so JSON.stringify consumes it.
 
-        const itemJson = item.toJson();
+        const itemJson = JSON.stringify(item);
         expect(typeof itemJson).toBe('string');
         const itemDict = JSON.parse(itemJson);
         expect(itemDict["01"]).toBeDefined();

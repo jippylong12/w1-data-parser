@@ -12,10 +12,21 @@ export class W1RecordGroup {
         // We can add helper methods if needed, but plain object structure is often enough for JSON.
     }
 
-    // In TS/JS, JSON.stringify works on objects directly.
-    // If we want a specific to_json method:
-    toJson(): string {
-        return JSON.stringify(this);
+    /**
+     * Returns a plain object representation of the record group,
+     * stripping away the class prototype. This is useful for
+     * Next.js serialization or other cases where plain objects are required.
+     */
+    toObject(): Record<string, any> {
+        return { ...this };
+    }
+
+    /**
+     * Helper for JSON serialization.
+     * When JSON.stringify() is called on this object, this method is used.
+     */
+    toJSON(): Record<string, any> {
+        return this.toObject();
     }
 }
 

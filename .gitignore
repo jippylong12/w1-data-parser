@@ -47,6 +47,7 @@ Thumbs.db
 # If using 'src' -> 'dist', then 'dist' above is sufficient.
 # This prevents accidentally committing compiled JS next to your TS files.
 *.js
+!tests/verify.js
 !*.d.ts
 *.js.map
 
@@ -69,3 +70,4 @@ Thumbs.db
 # -------------------------------------------------------------------------
 
 w1_py_parse
+

@@ -1,6 +1,6 @@
 
-import { W1Parser } from '../src/parser';
-import { DaBottomHoleLocationRecord } from '../src/models';
+import { W1Parser } from '../parser.js';
+import { DaBottomHoleLocationRecord } from '../models.js';
 import * as fs from 'fs';
 import * as path from 'path';
 

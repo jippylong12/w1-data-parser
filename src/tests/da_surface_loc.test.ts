@@ -1,6 +1,6 @@
 
-import { W1Parser } from '../src/parser';
-import { DaSurfaceLocationRecord } from '../src/models';
+import { W1Parser } from '../parser.js';
+import { DaSurfaceLocationRecord } from '../models.js';
 import * as fs from 'fs';
 import * as path from 'path';
 

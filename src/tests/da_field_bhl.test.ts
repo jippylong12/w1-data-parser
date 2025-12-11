@@ -1,6 +1,6 @@
 
-import { W1Parser } from '../src/parser';
-import { DaFieldBhlRecord } from '../src/models';
+import { W1Parser } from '../parser.js';
+import { DaFieldBhlRecord } from '../models.js';
 import * as fs from 'fs';
 import * as path from 'path';
 

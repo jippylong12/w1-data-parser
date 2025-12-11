@@ -1,6 +1,6 @@
 
-import { W1Parser } from '../src/parser';
-import { DaPermitRecord } from '../src/models';
+import { W1Parser } from '../parser.js';
+import { DaPermitRecord } from '../models.js';
 
 // We need to expose the private method or move logic to public for unit testing helper functions.
 // In TS, we can often access private methods via (parser as any)._methodName using brackets,

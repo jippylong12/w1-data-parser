@@ -1,6 +1,6 @@
 {
   "name": "w1-data-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for Texas RRC W-1 data files",
   "license": "ISC",
   "author": "Marcus Salinas",
@@ -18,7 +18,9 @@
     "oil",
     "gas",
     "parser",
-    "data"
+    "data",
+    "drilling",
+    "wells"
   ],
   "homepage": "https://github.com/jippylong12/w1-data-parser#readme",
   "files": [
